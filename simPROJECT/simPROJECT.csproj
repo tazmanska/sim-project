@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{54929EAE-08E8-4F8B-A587-49A8C36879A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>simPROJECT</RootNamespace>
+    <AssemblyName>simPROJECT</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>simPROJECT.Program</StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.FlightSimulator.SimConnect, Version=10.0.61259.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.FlightSimulator.SimConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppService.cs" />
+    <Compile Include="AppTrayIcon.cs" />
+    <Compile Include="Configuration\ConfigurationFile.cs" />
+    <Compile Include="Configuration\DeviceConfiguration.cs" />
+    <Compile Include="Configuration\MCP737Configuration.cs" />
+    <Compile Include="Configuration\MultiradioV1Configuration.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="DeviceFactory.cs" />
+    <Compile Include="DevicesService.cs" />
+    <Compile Include="Devices\DeviceType.cs" />
+    <Compile Include="Devices\Fake737McpDevice.cs" />
+    <Compile Include="Devices\Fake737McpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devices\Fake737McpForm.Designer.cs">
+      <DependentUpon>Fake737McpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Devices\MCP737.cs" />
+    <Compile Include="Devices\MultiradioV1.cs" />
+    <Compile Include="Devices\MultiradioV1WithEncoder.cs" />
+    <Compile Include="Devices\simINKeysCommand.cs" />
+    <Compile Include="Devices\simOUTLEDsCommand.cs" />
+    <Compile Include="FS\ADFVariable.cs" />
+    <Compile Include="FS\BCDRadioVariable.cs" />
+    <Compile Include="FS\ControlVariable.cs" />
+    <Compile Include="FS\DMEDistanceVariable.cs" />
+    <Compile Include="FS\DMESpeedVariable.cs" />
+    <Compile Include="FS\DMETimeVariable.cs" />
+    <Compile Include="FS\FSUIPC.cs" />
+    <Compile Include="FS\FSVariable.cs" />
+    <Compile Include="FS\SimpleVariable.cs" />
+    <Compile Include="FS\XPDRVariable.cs" />
+    <Compile Include="InformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationDialog.Designer.cs">
+      <DependentUpon>InformationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="IO\FTD2XX_NET.cs" />
+    <Compile Include="Planes\iFly737\iFly737MCP.cs" />
+    <Compile Include="Planes\iFly737\iFly737Plane.cs" />
+    <Compile Include="Planes\PMDG737NGX\MCP.cs" />
+    <Compile Include="Planes\PMDG737NGX\Plane.cs" />
+    <Compile Include="Planes\PMDG737NGX\PMDG737NGXSDK.cs" />
+    <Compile Include="Planes\ProSim737\ProSim737MCP.cs" />
+    <Compile Include="Planes\ProSim737\ProSim737Plane.cs" />
+    <Compile Include="Planes\ProSim737\ProsimOffset.cs" />
+    <Compile Include="UI\MCP737ConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MCP737ConfigurationDialog.Designer.cs">
+      <DependentUpon>MCP737ConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Keyboard.cs" />
+    <Compile Include="Planes\BaseMCP.cs" />
+    <Compile Include="Planes\BasePlane.cs" />
+    <Compile Include="Planes\BaseRadio.cs" />
+    <Compile Include="Planes\DummyPlane\DummyMCP.cs" />
+    <Compile Include="Planes\DummyPlane\DummyPlane.cs" />
+    <Compile Include="Planes\DummyPlane\DummyRadio.cs" />
+    <Compile Include="Planes\FSDefault\FSDefaultMCP.cs" />
+    <Compile Include="Planes\FSDefault\FSDefaultPlane.cs" />
+    <Compile Include="Planes\IMCP.cs" />
+    <Compile Include="Planes\IPlane.cs" />
+    <Compile Include="Planes\IPlaneDevice.cs" />
+    <Compile Include="Planes\IRadio.cs" />
+    <Compile Include="Planes\PlaneFactory.cs" />
+    <Compile Include="Planes\PlaneType.cs" />
+    <Compile Include="Planes\PMDG\PMDG737MCP.cs" />
+    <Compile Include="Planes\PMDG\PMDGPlane.cs" />
+    <Compile Include="Planes\RadioMode.cs" />
+    <Compile Include="Planes\TestPlane\TestMCP.cs" />
+    <Compile Include="Planes\TestPlane\TestPlane.cs" />
+    <Compile Include="Planes\TestPlane\TestRadio.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InformationDialog.resx">
+      <DependentUpon>InformationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.pl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmptyConfigurationDialog.resx">
+      <DependentUpon>EmptyConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MCP737ConfigurationDialog.resx">
+      <DependentUpon>MCP737ConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PanelConfigurationDialogBase.resx">
+      <DependentUpon>PanelConfigurationDialogBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\EmptyConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmptyConfigurationDialog.Designer.cs">
+      <DependentUpon>EmptyConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PanelConfigurationDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PanelConfigurationDialogBase.Designer.cs">
+      <DependentUpon>PanelConfigurationDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\IniFile.cs" />
+    <Compile Include="Utils\VK.cs" />
+    <Compile Include="Utils\WinAPI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\FTD2XX_NET.dll" />
+    <Content Include="dokumenty\todo.txt" />
+    <Content Include="Microsoft.FlightSimulator.SimConnect.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+﻿ - obsługa Mode C i Ident w FSInn
+ 
+ - wyłączanie/włączanie paneli zgodnie ze stanem AVIONICS
+
+ - przerobić obsługę radia
+ - konfiguracja radia

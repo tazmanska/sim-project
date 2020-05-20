@@ -1,0 +1,180 @@
+; PMDG 737NG/747 Keyboard Command Assignments
+;  * Copy this INI to PMDG installed folder and remane to 737kbd.ini
+;
+; Format is:
+; [String]=Modifier,KeyChar,Command
+; 
+; Where Modifier can be a binary combination of:
+; TAB	: 0x01
+; CTRL	: 0x02
+; SHIFT	: 0x04
+;
+; Where KeyChar can be a one of:
+; (Alpha Char/Keys)------------------------------
+; 0 : 48    1 : 49    2 : 50    3 : 51    4 : 52
+; 5 : 53    6 : 54    7 : 55    8 : 56    9 : 57
+; A : 65    B : 66    C : 67    D : 68    E : 69
+; F : 70    G : 71    H : 72    I : 73    J : 74
+; K : 75    L : 76    M : 77    N : 78    O : 79
+; P : 80    Q : 81    R : 82    S : 83    T : 84
+; U : 85    V : 86    W : 87    X : 88    Y : 89
+; Z : 90
+; (Special Char/Keys)-----------------------------
+; ` : -64   - : -67   = : -69   \ : -36   [ : -37
+; ] : -35   ; : -70   ' : -34   , : -68   . : -66
+; / : -65
+; (Numeric Char/Keys)-----------------------------
+; NUM_0: 45    NUM_1: 35    NUM_2 : 40    NUM_3 : 34
+; NUM_4: 37    NUM_5: 12    NUM_6 : 39    NUM_7 : 36
+; NUM_8: 38    NUM_9: 33    NUM_DEL: 46
+; (Function Keys)---------------------------------
+; F1 : 112     F2 : 113     F3 : 114     F4 : 115
+; F5 : 116     F6 : 117     F7 : 118     F8 : 119
+; F9 : 120     F10: 121     F11: 122     F12: 123
+;-------------------------------------------------
+
+[Keyboard]
+; FS2Crew VC2010 keyboard assignments
+MCP Press AT=6,66,4					; CTRL+SHIFT+B
+MCP Press N1=6,71,5					; CTRL+SHIFT+G
+MCP Press SPD=6,72,6				; CTRL+SHIFT+H
+MCP Press LVLCHG=6,73,8				; CTRL+SHIFT+I
+MCP Press VNAV=6,74,9				; CTRL+SHIFT+J
+MCP Press LNAV=6,77,10				; CTRL+SHIFT+M
+MCP Press VORLOC=6,78,11			; CTRL+SHIFT+N
+MCP Press APP=6,79,12				; CTRL+SHIFT+O
+MCP Press HDGSEL=2,72,13			; CTRL+H
+MCP Press ALTHLD=6,80,15			; CTRL+SHIFT+P
+MCP Press VS=2,80,16				; CTRL+P
+MCP Press CMD L=6,65,24				; CTRL+SHIFT+A
+MCP Press FD L=6,70,29				; CTRL+SHIFT+F
+MCP Increase Course=6,75,35			; CTRL+SHIFT+K
+MCP Decrease Course=2,75,36			; CTRL+K
+MCP Increase Altitude=2,73,37		; CTRL+I
+MCP Decrease Altitude=2,85,38		; CTRL+U
+MCP Increase Speed=2,84,39			; CTRL+T
+MCP Decrease Speed=2,89,40			; CTRL+Y
+MCP Increase Heading=4,72,41		; CTRL+H
+MCP Decrease Heading=6,88,42		; CTRL+SHIFT+X
+MCP Increase VS=6,87,43				; CTRL+SHIFT+W
+MCP Decrease VS=6,82,44				; CTRL+SHIFT+R
+MCP Set TOGA=2,68,55				; CTRL+SHIFT+D
+MCP Press SPD INTV=6,85,57			; CTRL+SHIFT+U
+MCP Press ALT INTV=4,85,58			; SHIFT+U
+Autobrakes Increase Pos=6,89,104		; CTRL+SHIFT+Y
+Autobrakes Decrease Pos=6,86,105	; CTRL+SHIFT+V
+
+; SerialFP2 MCP Combo keyboard assignments
+MCP Press APDISCON          =3,048,3	;CTRL+TAB+0
+;MCP Press AT                =3,049,4    ;CTRL+TAB+1
+;MCP Press N1                =3,050,5    ;CTRL+TAB+2
+;MCP Press SPD               =3,051,6    ;CTRL+TAB+3
+MCP Press CO                =3,052,7    ;CTRL+TAB+4
+;MCP Press LVLCHG            =3,053,8    ;CTRL+TAB+5
+;MCP Press VNAV              =3,054,9    ;CTRL+TAB+6
+;MCP Press LNAV              =3,055,10   ;CTRL+TAB+7
+;MCP Press VOR LOC           =3,056,11   ;CTRL+TAB+8
+;MCP Press APP               =3,057,12   ;CTRL+TAB+9
+;MCP Press HDGSEL            =3,065,13   ;CTRL+TAB+A
+MCP Press HDGHLD            =3,066,14   ;CTRL+TAB+B
+;MCP Press ALTHLD            =3,067,15   ;CTRL+TAB+C
+;MCP Press VS                =3,068,16   ;CTRL+TAB+D
+;MCP Press CMD L             =3,069,24   ;CTRL+TAB+E
+MCP Press CMD C             =3,070,25   ;CTRL+TAB+F
+MCP Press CMD R             =3,071,26   ;CTRL+TAB+G
+MCP Press CWS L             =3,072,27   ;CTRL+TAB+H
+MCP Press CWS R             =3,073,28   ;CTRL+TAB+I
+;MCP Press FD L              =3,074,29   ;CTRL+TAB+J
+MCP Press FD R              =3,075,30   ;CTRL+TAB+K
+MCP Increase Bank Limiter   =3,076,33   ;CTRL+TAB+L
+MCP Decrease Bank Limiter   =3,077,34   ;CTRL+TAB+M
+;MCP Increase Course         =3,078,35   ;CTRL+TAB+N
+;MCP Decrease Course         =3,079,36   ;CTRL+TAB+O
+;MCP Increase Altitude       =3,080,37   ;CTRL+TAB+P
+;MCP Decrease Altitude       =3,081,38   ;CTRL+TAB+Q
+;MCP Increase Speed          =3,082,39   ;CTRL+TAB+R
+;MCP Decrease Speed          =3,083,40   ;CTRL+TAB+S
+;MCP Increase Heading        =3,084,41   ;CTRL+TAB+T
+;MCP Decrease Heading        =3,085,42   ;CTRL+TAB+U
+;MCP Increase VS             =3,086,43   ;CTRL+TAB+V
+;MCP Decrease VS             =3,087,44   ;CTRL+TAB+W
+MCP Increase Course Fast    =3,088,45   ;CTRL+TAB+X
+MCP Decrease Course Fast    =3,089,46   ;CTRL+TAB+Y
+MCP Increase Altitude Fast  =3,090,47   ;CTRL+TAB+Z
+
+MCP Decrease Altitude Fast  =5,048,48	;SHIFT+TAB+0
+MCP Increase Speed Fast     =5,049,49   ;SHIFT+TAB+1
+MCP Decrease Speed Fast     =5,050,50   ;SHIFT+TAB+2
+MCP Increase Hdg Fast       =5,051,51   ;SHIFT+TAB+3
+MCP Decrease Hdg Fast       =5,052,52   ;SHIFT+TAB+4
+MCP Increase VS Fast        =5,053,53   ;SHIFT+TAB+5
+MCP Decrease VS Fast        =5,054,54   ;SHIFT+TAB+6
+;MCP Set TOGA                =5,055,55   ;SHIFT+TAB+7
+MCP Reset TOGA              =5,056,56   ;SHIFT+TAB+8
+;MCP Press SPD INTV          =5,057,57   ;SHIFT+TAB+9
+;MCP Press ALT INTV          =5,065,58   ;SHIFT+TAB+A
+EFIS Press Mins             =5,066,59   ;SHIFT+TAB+B
+EFIS Increase Mins          =5,067,60   ;SHIFT+TAB+C
+EFIS Decrease Mins          =5,068,61   ;SHIFT+TAB+D
+EFIS Reset Mins             =5,069,63   ;SHIFT+TAB+E
+EFIS Press Baro             =5,070,64   ;SHIFT+TAB+F
+EFIS Increase Baro          =5,071,65   ;SHIFT+TAB+G
+EFIS Decrease Baro          =5,072,66   ;SHIFT+TAB+H
+EFIS Press Baro STD         =5,073,68   ;SHIFT+TAB+I
+EFIS Press FPV              =5,074,69   ;SHIFT+TAB+J
+EFIS Press MTRS             =5,075,70   ;SHIFT+TAB+K
+EFIS Increase NavL          =5,076,71   ;SHIFT+TAB+L
+EFIS Decrease NavL          =5,077,72   ;SHIFT+TAB+M
+EFIS Increase NavR          =5,078,74   ;SHIFT+TAB+N
+EFIS Decrease NavR          =5,079,75   ;SHIFT+TAB+O
+EFIS Increase ND Mode       =5,080,77   ;SHIFT+TAB+P
+EFIS Decrease ND Mode       =5,081,78   ;SHIFT+TAB+Q
+EFIS Press ND Mode CTR      =5,082,80   ;SHIFT+TAB+R
+EFIS Increase ND Range      =5,083,81   ;SHIFT+TAB+S
+EFIS Decrease ND Range      =5,084,82   ;SHIFT+TAB+T
+EFIS Press ND Range TFC     =5,085,84   ;SHIFT+TAB+U
+EFIS Press WXR              =5,086,85   ;SHIFT+TAB+V
+EFIS Press STA              =5,087,86   ;SHIFT+TAB+W
+EFIS Press WPT              =5,088,87   ;SHIFT+TAB+X
+EFIS Press ARPT             =5,089,88   ;SHIFT+TAB+Y
+EFIS Press DATA             =5,090,89   ;SHIFT+TAB+Z
+
+EFIS Press POS              =7,048,90	;CTRL+SHIFT+TAB+0
+EFIS Press TERR             =7,049,91   ;CTRL+SHIFT+TAB+1
+Panel Switcher - Show       =7,050,92   ;CTRL+SHIFT+TAB+2
+Panel Switcher - Main       =7,051,93   ;CTRL+SHIFT+TAB+3
+Panel Switcher - Zoom       =7,052,94   ;CTRL+SHIFT+TAB+4
+Panel Switcher - Appr       =7,053,95   ;CTRL+SHIFT+TAB+5
+Panel Switcher - Lndg       =7,054,96   ;CTRL+SHIFT+TAB+6
+Panel Switcher - FMC        =7,055,97   ;CTRL+SHIFT+TAB+7
+Panel Switcher - Ovhd Tab   =7,056,98   ;CTRL+SHIFT+TAB+8
+Panel Switcher - Thr        =7,057,99   ;CTRL+SHIFT+TAB+9
+Panel Switcher - EICAS      =7,065,100  ;CTRL+SHIFT+TAB+A
+Panel Switcher - Rdio       =7,066,101  ;CTRL+SHIFT+TAB+B
+Panel Switcher - Chrno      =7,067,102  ;CTRL+SHIFT+TAB+C
+Panel Switcher - Misc       =7,068,103  ;CTRL+SHIFT+TAB+D
+;Autobrakes Increase Pos     =7,069,104  ;CTRL+SHIFT+TAB+E
+;Autobrakes Decrease Pos     =7,070,105  ;CTRL+SHIFT+TAB+F
+Doors - Open Front Pax      =7,071,107  ;CTRL+SHIFT+TAB+G
+Doors - Open Other          =7,072,108  ;CTRL+SHIFT+TAB+H
+Pushback - Backwards        =7,073,109  ;CTRL+SHIFT+TAB+I
+Pushback - Left             =7,074,110  ;CTRL+SHIFT+TAB+J
+Pushback - Right            =7,075,111  ;CTRL+SHIFT+TAB+K
+Toggle VC Yoke              =7,076,112  ;CTRL+SHIFT+TAB+L
+Toggle Dome Light           =7,077,113  ;CTRL+SHIFT+TAB+M
+CDU - INIT REF              =7,078,114  ;CTRL+SHIFT+TAB+N
+CDU - RTE                   =7,079,115  ;CTRL+SHIFT+TAB+O
+CDU - CLB                   =7,080,116  ;CTRL+SHIFT+TAB+P
+CDU - CRZ                   =7,081,117  ;CTRL+SHIFT+TAB+Q
+CDU - DES                   =7,082,118  ;CTRL+SHIFT+TAB+R
+CDU - MENU                  =7,083,119  ;CTRL+SHIFT+TAB+S
+CDU - LEGS                  =7,084,120  ;CTRL+SHIFT+TAB+T
+CDU - DEP ARR               =7,085,121  ;CTRL+SHIFT+TAB+U
+CDU - HOLD                  =7,086,122  ;CTRL+SHIFT+TAB+V
+CDU - PROG                  =7,087,123  ;CTRL+SHIFT+TAB+W
+CDU - N1 LIMIT              =7,088,124  ;CTRL+SHIFT+TAB+X
+CDU - FIX                   =7,089,125  ;CTRL+SHIFT+TAB+Y
+CDU - PREV PAGE             =7,090,126  ;CTRL+SHIFT+TAB+Z
+CDU - NEXT PAGE             =7,-37,127	;CTRL+SHIFT+TAB+[
+CDU - EXEC                  =7,-35,128	;CTRL+SHIFT+TAB+]
+CDU - KBD LEFT              =7,-70,129	;CTRL+SHIFT+TAB+;
