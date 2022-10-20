@@ -11,7 +11,8 @@ namespace simPROJECT.FS
         {
             None,
             FS2004,
-            FSX
+            FSX,
+			Other
         }
 
 		// Constants
@@ -351,6 +352,17 @@ namespace simPROJECT.FS
                 if (FSUIPC_Open(SIM_FSX, ref result))
                 {
                     SimVersion = FSVersion.FSX;
+                    return true;
+                }
+
+                FSUIPC_Close();
+                FSUIPC_Initialization();
+                result = 0;
+
+                // próba połączenia z dowolnym FS
+                if (FSUIPC_Open(SIM_ANY, ref result))
+                {
+                    SimVersion = FSVersion.Other;
                     return true;
                 }
 
